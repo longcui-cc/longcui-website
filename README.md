@@ -1,1 +1,3 @@
-# longcui-cc-website
+# longcui-website
+
+## VitePress
