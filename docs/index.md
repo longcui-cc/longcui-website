@@ -5,7 +5,7 @@ titleTemplate: 北京珑萃科技工作室
 editLink: true
 lastUpdated: true
 hero:
-  name: 站点建设中，敬请期待！
+  name: 站点建设中...
   text: 北京珑萃科技工作室
   tagline: 专业二次开发及系统集成
   description: 北京珑萃科技工作室，专业二次开发及系统集成服务。
