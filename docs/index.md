@@ -10,8 +10,8 @@ hero:
   tagline: 专业二次开发及系统集成
   description: 北京珑萃科技工作室，专业二次开发及系统集成服务。
   image:
-    light: /longcui-logo-large-light.png
-    dark: /longcui-logo-large-dark.png
+    light: assets/images/logo/longcui-logo-large-light.png
+    dark: assets/images/logo/longcui-logo-large-dark.png
     alt: 北京珑萃科技工作室
     class: hero-image-container
   actions:

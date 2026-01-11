@@ -9,14 +9,14 @@ export default defineConfig({
   cleanUrls: false,
   head: [
     ['link', { rel: 'canonical', href: 'https://longcui.cc' }],
-    ['link', { rel: 'icon', media: '(prefers-color-scheme: light)', href: '/longcui-logo-mini-light.svg' }],
-    ['link', { rel: 'icon', media: '(prefers-color-scheme: dark)', href: '/longcui-logo-mini-dark.svg' }]
+    ['link', { rel: 'icon', media: '(prefers-color-scheme: light)', href: 'assets/images/logo/longcui-logo-mini-light.svg' }],
+    ['link', { rel: 'icon', media: '(prefers-color-scheme: dark)', href: 'assets/images/logo/longcui-logo-mini-dark.svg' }]
   ],
 
   themeConfig: {
     logo: {
-      light: '/longcui-logo-mini-light.svg',
-      dark: '/longcui-logo-mini-dark.svg'
+      light: 'assets/images/logo/longcui-logo-mini-light.svg',
+      dark: 'assets/images/logo/longcui-logo-mini-dark.svg'
     },
     siteTitle: '珑萃科技',
     appearance: true,
