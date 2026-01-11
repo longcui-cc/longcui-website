@@ -17,10 +17,10 @@ hero:
   actions:
     - theme: brand
       text: 关于我们
-      link: /guide/what-is-vitepress
+      link: /us/what-is-vitepress
     - theme: alt
       text: 开发者文档
-      link: /guide/quickstart
+      link: /us/quickstart
     - theme: alt
       text: GitHub
       link: https://github.com/longcui-cc

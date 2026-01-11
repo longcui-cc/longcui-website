@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import sidebar from '../sidebar.config.mts'
 
 export default defineConfig({
   title: '珑萃科技',
@@ -21,8 +22,8 @@ export default defineConfig({
     appearance: true,
 
     nav: [
-      { text: '指南', link: '/guide/what-is-vitepress', activeMatch: '/guide/' },
-      { text: '参考', link: '/reference/site-config', activeMatch: '/reference/' },
+      { text: '指南', link: '/us/what-is-vitepress', activeMatch: '/guide/' },
+      { text: '参考', link: '/us/site-config', activeMatch: '/reference/' },
       {
         text: '2.0.0-alpha.15',
         items: [
@@ -33,45 +34,8 @@ export default defineConfig({
       { text: 'GitHub', icon: 'github', link: 'https://github.com/longcui-cc' }
     ],
 
-    sidebar: {
-      '/guide/': [
-        {
-          text: '入门',
-          items: [
-            { text: '什么是 VitePress？', link: '/guide/what-is-vitepress' },
-            { text: '快速开始', link: '/guide/quickstart' },
-            { text: '配置', link: '/guide/configuration' }
-          ]
-        },
-        {
-          text: '写作',
-          items: [
-            { text: 'Markdown 基础', link: '/guide/markdown-basics' },
-            { text: 'Markdown 扩展', link: '/guide/markdown-extensions' }
-          ]
-        }
-      ],
-      '/reference/': [
-        {
-          text: '参考',
-          items: [
-            { text: '站点配置', link: '/reference/site-config' },
-            { text: '主题配置', link: '/reference/theme-config' },
-            { text: 'Frontmatter 配置', link: '/reference/frontmatter-config' },
-            { text: 'Markdown 配置', link: '/reference/markdown' },
-            {
-              text: '默认主题配置',
-              items: [
-                { text: '基础配置', link: '/reference/defaults/' },
-                { text: '导航栏', link: '/reference/defaults/navbar' },
-                { text: '侧边栏', link: '/reference/defaults/sidebar' }
-              ]
-            },
-            { text: '运行时 API', link: '/reference/runtime-api' }
-          ]
-        }
-      ]
-    },
+    // 只保留这一行，引用抽离的侧边栏
+    sidebar: sidebar,
 
     search: {
       provider: 'local',
