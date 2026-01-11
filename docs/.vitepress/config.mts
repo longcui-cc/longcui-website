@@ -7,19 +7,16 @@ export default defineConfig({
   base: '/',
   cleanUrls: false,
   head: [
-    ['link', { rel: 'icon', href: '/logo-mini.png' }],
     ['link', { rel: 'canonical', href: 'https://longcui.cc' }],
-    // [
-    //   'style',
-    //   {},
-    //   `:root { --vp-c-brand: #646cff; --vp-c-brand-light: #747bff; --vp-c-brand-lighter: #9499ff; --vp-c-brand-dark: #535bf2; --vp-c-brand-darker: #454ce1; --vp-home-hero-name-color: transparent; --vp-home-hero-name-background: linear-gradient(120deg, #bd34fe 30%, #41d1ff); --vp-home-hero-image-background-image: linear-gradient(-45deg, #bd34fe 50%, #47caff 50%); --vp-home-hero-image-filter: blur(44px); }`
-    // ],
-    // 隐藏明暗切换按钮
-    ['style', {}, `.VPNavBarAppearance { display: none !important; }`]
-],
+    ['link', { rel: 'icon', media: '(prefers-color-scheme: light)', href: '/longcui-logo-mini-3B5998.svg' }],
+    ['link', { rel: 'icon', media: '(prefers-color-scheme: dark)', href: '/longcui-logo-mini-A78BFA.svg' }]
+  ],
 
   themeConfig: {
-    logo: '/logo-mini.png',
+    logo: {
+      light: '/longcui-logo-mini-3B5998.svg',
+      dark: '/longcui-logo-mini-A78BFA.svg'
+    },
     siteTitle: '珑萃科技',
     appearance: true,
 
@@ -33,12 +30,6 @@ export default defineConfig({
           { text: '历史版本', link: 'https://github.com/vuejs/vitepress/releases?page=2' }
         ]
       },
-      // {
-      //   text: '语言',
-      //   items: [
-      //     { text: '简体中文', link: '/' }
-      //   ]
-      // },
       { text: 'GitHub', icon: 'github', link: 'https://github.com/longcui-cc' }
     ],
 
@@ -94,7 +85,6 @@ export default defineConfig({
       text: '最后更新于'
     },
     footer: {
-      // message: '北京珑萃科技工作室',
       copyright: '版权所有 © 2024-至今 北京珑萃科技工作室'
     },
     returnToTopLabel: '回到顶部',
