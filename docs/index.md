@@ -5,10 +5,10 @@ titleTemplate: 北京珑萃科技工作室
 editLink: true
 lastUpdated: true
 hero:
-  name: 珑萃科技
+  name: 站点建设中，敬请期待！
   text: 北京珑萃科技工作室
   tagline: 专业二次开发及系统集成
-  description: 将 Markdown 变成优雅的文档，只需几分钟
+  description: 北京珑萃科技工作室，专业二次开发及系统集成服务。
   image:
     src: /logo-large.webp
     alt: 北京珑萃科技工作室
