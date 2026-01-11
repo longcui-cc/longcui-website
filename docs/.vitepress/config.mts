@@ -1,40 +1,104 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  // 网站基础信息 - 你的工作室信息，直接用
-  title: '北京珑萃科技工作室',
-  description: '专注优质技术服务，匠心打造精品项目 · 一站式解决方案服务商',
-  // 网站根路径（部署到Github Pages必配，URL干净无后缀）
+  title: '珑萃科技',
+  description: '北京珑萃科技工作室',
+  lang: 'zh-CN',
   base: '/',
-  // 主题核心配置：导航栏+底部版权，完美适配工作室官网
+  cleanUrls: false,
+  head: [
+    ['link', { rel: 'icon', href: '/logo-mini.png' }],
+    ['link', { rel: 'canonical', href: 'https://longcui.cc' }],
+    // 隐藏明暗切换按钮
+    ['style', {}, `.VPNavBarAppearance { display: none !important; }`]
+],
+
   themeConfig: {
+    logo: '/logo-mini.png',
+    siteTitle: '珑萃科技',
+    appearance: true,
+
     nav: [
-      { text: '首页', link: '/' },
-      { text: '核心业务', link: '/service' },
-      { text: '成功案例', link: '/cases' },
-      { text: '联系我们', link: '/contact' }
+      { text: '指南', link: '/guide/what-is-vitepress', activeMatch: '/guide/' },
+      { text: '参考', link: '/reference/site-config', activeMatch: '/reference/' },
+      {
+        text: '2.0.0-alpha.15',
+        items: [
+          { text: '最新版本', link: 'https://github.com/vuejs/vitepress/releases' },
+          { text: '历史版本', link: 'https://github.com/vuejs/vitepress/releases?page=2' }
+        ]
+      },
+      // {
+      //   text: '语言',
+      //   items: [
+      //     { text: '简体中文', link: '/' }
+      //   ]
+      // },
+      { text: 'GitHub', icon: 'github', link: 'https://github.com/longcui-cc' }
     ],
-    footer: {
-      message: '© 2026 北京珑萃科技工作室 版权所有',
-      copyright: '用心做好每一次技术服务'
+
+    sidebar: {
+      '/guide/': [
+        {
+          text: '入门',
+          items: [
+            { text: '什么是 VitePress？', link: '/guide/what-is-vitepress' },
+            { text: '快速开始', link: '/guide/quickstart' },
+            { text: '配置', link: '/guide/configuration' }
+          ]
+        },
+        {
+          text: '写作',
+          items: [
+            { text: 'Markdown 基础', link: '/guide/markdown-basics' },
+            { text: 'Markdown 扩展', link: '/guide/markdown-extensions' }
+          ]
+        }
+      ],
+      '/reference/': [
+        {
+          text: '参考',
+          items: [
+            { text: '站点配置', link: '/reference/site-config' },
+            { text: '主题配置', link: '/reference/theme-config' },
+            { text: 'Frontmatter 配置', link: '/reference/frontmatter-config' },
+            { text: 'Markdown 配置', link: '/reference/markdown' },
+            {
+              text: '默认主题配置',
+              items: [
+                { text: '基础配置', link: '/reference/defaults/' },
+                { text: '导航栏', link: '/reference/defaults/navbar' },
+                { text: '侧边栏', link: '/reference/defaults/sidebar' }
+              ]
+            },
+            { text: '运行时 API', link: '/reference/runtime-api' }
+          ]
+        }
+      ]
     },
-    // 右侧自动生成目录大纲，文档页必备
-    outline: true,
+
+    search: {
+      provider: 'local',
+      placeholder: '搜索文档'
+    },
+    editLink: {
+      pattern: 'https://github.com/longcui-cc/website-vitepress/edit/main/docs/:path',
+      text: '在 GitHub 上编辑此页'
+    },
+    lastUpdated: {
+      text: '最后更新于'
+    },
+    footer: {
+      // message: '北京珑萃科技工作室',
+      copyright: '版权所有 © 2024-至今 北京珑萃科技工作室'
+    },
+    returnToTopLabel: '回到顶部',
     outlineTitle: '目录'
   },
-  // 重中之重：中文友好极致优化，无标点错位、自动间距，不用额外配置
+
   markdown: {
-    theme: 'github-light',
-    lineNumbers: false
-  },
-  // 全局样式优化，适配中文显示
-  head: [
-    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1' }]
-  ],
-  // ========== 已添加：方案2 全局放行 所有域名/IP 无拦截 ==========
-  vite: {
-    server: {
-      allowedHosts: true
-    }
+    headers: { level: [1, 2, 3, 4] },
+    lineNumbers: true,
+    theme: { light: 'github-light', dark: 'github-dark' }
   }
 })
