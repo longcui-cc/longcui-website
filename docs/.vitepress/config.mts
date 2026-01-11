@@ -12,7 +12,6 @@ export default defineConfig({
     ['link', { rel: 'icon', media: '(prefers-color-scheme: light)', href: '/logo/longcui-logo-mini-light.svg' }],
     ['link', { rel: 'icon', media: '(prefers-color-scheme: dark)', href: '/logo/longcui-logo-mini-dark.svg' }]
   ],
-
   themeConfig: {
     logo: {
       light: '/logo/longcui-logo-mini-light.svg',
@@ -20,7 +19,6 @@ export default defineConfig({
     },
     siteTitle: '珑萃科技',
     appearance: true,
-
     nav: [
       { text: '指南', link: '/us/what-is-vitepress', activeMatch: '/guide/' },
       { text: '参考', link: '/us/site-config', activeMatch: '/reference/' },
@@ -33,10 +31,7 @@ export default defineConfig({
       },
       { text: 'GitHub', icon: 'github', link: 'https://github.com/longcui-cc' }
     ],
-
-    // 只保留这一行，引用抽离的侧边栏
     sidebar: sidebar,
-
     search: {
       provider: 'local',
       placeholder: '搜索文档'
@@ -54,7 +49,6 @@ export default defineConfig({
     returnToTopLabel: '回到顶部',
     outlineTitle: '目录'
   },
-
   markdown: {
     headers: { level: [1, 2, 3, 4] },
     lineNumbers: true,
