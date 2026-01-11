@@ -9,6 +9,11 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: '/logo-mini.png' }],
     ['link', { rel: 'canonical', href: 'https://longcui.cc' }],
+    // [
+    //   'style',
+    //   {},
+    //   `:root { --vp-c-brand: #646cff; --vp-c-brand-light: #747bff; --vp-c-brand-lighter: #9499ff; --vp-c-brand-dark: #535bf2; --vp-c-brand-darker: #454ce1; --vp-home-hero-name-color: transparent; --vp-home-hero-name-background: linear-gradient(120deg, #bd34fe 30%, #41d1ff); --vp-home-hero-image-background-image: linear-gradient(-45deg, #bd34fe 50%, #47caff 50%); --vp-home-hero-image-filter: blur(44px); }`
+    // ],
     // 隐藏明暗切换按钮
     ['style', {}, `.VPNavBarAppearance { display: none !important; }`]
 ],
