@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import sidebar from '../sidebar.config.mts'
+import sidebar from '../sidebar.mts'
 
 export default defineConfig({
   title: '珑萃科技',
