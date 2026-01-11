@@ -1,7 +1,7 @@
 {
-  "name": "vitepress",
+  "name": "website-vitepress",
   "version": "1.0.0",
-  "description": "北京珑萃科技工作室 官网",
+  "description": "北京珑萃科技工作室",
   "main": "index.js",
   "scripts": {
     "dev": "vitepress dev docs --host 0.0.0.0",
@@ -9,8 +9,8 @@
     "preview": "vitepress preview docs --host 0.0.0.0",
     "deploy": "vitepress build docs && gh-pages -d docs/.vitepress/dist --cname longcui.cc --silent"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["珑萃", "珑萃科技", "北京珑萃科技工作室"],
+  "author": "北京珑萃科技工作室",
   "license": "ISC",
   "devDependencies": {
     "gh-pages": "^6.3.0",
